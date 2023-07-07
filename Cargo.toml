@@ -1,0 +1,23 @@
+[package]
+name = "f"
+version = "0.1.0"
+authors = ["Desmond Germans <desmond@germansmedia.nl>"]
+edition = "2018"
+
+[profile.dev]
+opt-level = 0
+debug = true
+lto = true
+codegen-units = 28
+
+[profile.release]
+opt-level = 3
+debug = false
+lto = "fat"
+codegen-units = 1
+
+[lib]
+name = "f"
+crate-type = ["rlib"]
+
+[dependencies]
