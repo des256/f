@@ -1,4 +1,7 @@
-use crate::*;
+use crate::sys;
+
+mod surface;
+pub use surface::*;
 
 mod gpu;
 pub use gpu::*;
